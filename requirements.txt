@@ -1,0 +1,4 @@
+pymupdf
+pyqt6
+qt_theme_manager
+build
