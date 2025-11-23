@@ -5,9 +5,11 @@ from pymupdf_qt_viewer.pymupdfviewer import PdfViewer
 def main():
 
     app = QtWidgets.QApplication(sys.argv)
+    m = QtWidgets.QMainWindow()
     pdf_viewer = PdfViewer()
-    pdf_viewer.loadDocument("resources/Sample PDF.pdf")
-    pdf_viewer.showMaximized()
+    m.setCentralWidget(pdf_viewer)
+    m.showMaximized()
+    pdf_viewer.loadDocument(r"C:\Users\debru\Downloads\guideline-good-pharmacovigilance-practices-module-i-pharmacovigilance-systems-and-their-quality-systems_en.pdf")
     sys.exit(app.exec())
 
 
