@@ -880,6 +880,10 @@ class PdfViewer(QWidget):
         super(PdfViewer, self).__init__(parent)
         self.setWindowTitle("Pymupdf4Qt")
         self.initViewer()
+        self._filepath = None
+
+    def filepath(self) -> str:
+        return self._filepath
     
     @classmethod
     def supportedFormats(cls) -> list[str]:
@@ -889,6 +893,7 @@ class PdfViewer(QWidget):
         if filepath == "":
             return
         
+        self._filepath = filepath
         self.fitzdoc: pymupdf.Document = pymupdf.Document(filepath)
         self.pdfview.setDocument(self.fitzdoc)
         self.outline_model.setDocument(self.fitzdoc)
