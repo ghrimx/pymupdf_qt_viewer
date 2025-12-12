@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "pymupdf_qt_viewer"
 description = "PDF viewer build on Pymupdf and PyQt6"
-version = "0.1"
+version = "0.2"
 authors = [
   {name = "Debruycker Vincent", email = ""}
 ]

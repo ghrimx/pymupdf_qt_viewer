@@ -973,6 +973,7 @@ class PdfViewer(QWidget):
         self.toolbar.addAction(self.fold_left_pane)
         self.toolbar.addSeparator()
         self.toolbar.addWidget(self.pdfview.pageNavigator().currentpage_lineedit)
+        self.toolbar.addWidget(self.pdfview.pageNavigator().pagecount_label)
         self.toolbar.addAction(self.pdfview.pageNavigator().previous_page)
         self.toolbar.addAction(self.pdfview.pageNavigator().next_page)
         self.toolbar.addSeparator()
